@@ -47,21 +47,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="exit.php" aria-current="page">Sair</a>
                     </li>
+                    <li class="nav-item">
+                        <?= $admButtom ?>
+                    </li>
                 </ul>
         </div>
     </nav>
 
     <div class="container">
         <br>
-        <!-- <?= $content ?> -->
+        <?= $content ?>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card card-success">
                     <div class="card-body">
                         <h5 class="card-title">Título do Card 1</h5>
                         <p class="card-text">Descrição do Card 1.</p>
-                        <a href="#" class="btn">Fazer</a>
+                        <a href="#" class="btn">Ver</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +73,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Título do Card 2</h5>
                         <p class="card-text">Descrição do Card 2.</p>
-                        <a href="#" class="btn">Fazer</a>
+                        <a href="#" class="btn btn-default">Fazer</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +144,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 

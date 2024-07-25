@@ -83,11 +83,12 @@ class Database {
     }
 
     // Getters e Setters para exercises
-    public function createExercise($name, $description, $difficulty) {
+    public function createExercise($name, $description, $difficulty, $test) {
         $query = 'INSERT INTO exercises (name, description, difficulty) VALUES (:name, :description, :difficulty)';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':test', $test);
         $stmt->bindParam(':difficulty', $difficulty);
         if ($stmt->execute()) {
             return $this->conn->lastInsertId();

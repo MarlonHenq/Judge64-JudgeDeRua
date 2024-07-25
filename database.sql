@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS judge_platform;
-USE judge_platform;
-
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
@@ -16,6 +13,7 @@ CREATE TABLE IF NOT EXISTS exercises (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
+    test TEXT,
     users_completed TEXT,
     difficulty ENUM('Easy', 'Medium', 'Hard') NOT NULL,
     available BOOLEAN DEFAULT TRUE,

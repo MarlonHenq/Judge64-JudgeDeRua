@@ -38,13 +38,43 @@ nav {
     border-bottom: 10px solid #4AA64B;
 }
 
+.btn-default {
+    background-color: #7162E6;
+    border-color: #7162E6;
+    color: #ffffff;
+    border-radius: 0%;
+    border-right: 10px solid #7162E6;
+    border-bottom: 10px solid #3829AD;
+    
+}
+
+.btn-default:hover {
+    background-color: #ffffff;
+    border-right: 10px solid #4a39c5;
+    border-bottom: 10px solid #3829AD;
+    color: #000000;
+}
+
 /* Container */
 .container {
     margin-top: 20px;
 }
 
+.form-label {
+    border-radius: 0%;
+}
+
 /* Card */
+
 .card {
+    /* border: 10px solid #8DE88E; */
+    border-right: 15px solid #767676;
+    border-bottom: 15px solid #767676;
+    background-color: #A3A3A3;
+    border-radius: 0%;
+}
+
+.card-success {
     /* border: 10px solid #8DE88E; */
     border-right: 15px solid #8DE88E;
     border-bottom: 15px solid #8DE88E;
