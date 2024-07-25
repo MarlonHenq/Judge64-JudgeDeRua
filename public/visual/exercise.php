@@ -53,33 +53,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="dashboard.php" aria-current="page">Sair Para Dashboard</a>
                     </li>
+
+                    <li class="nav-item">
+                        <?= $admButtom ?>
+                    </li>
                 </ul>
         </div>
     </nav>
 
     <div class="container">
-        <form action="createEx.php" method="post">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name">
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Descrição</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="test" class="form-label">Tests</label>
-                <textarea class="form-control" id="test" name="test"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="difficulty" class="form-label">Dificuldade</label>
-                <select class="form-select" id="difficulty" name="difficulty">
-                    <option value="1">Fácil</option>
-                    <option value="2">Médio</option>
-                    <option value="3">Difícil</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <br>
+
     </div>
 
         <script

@@ -84,7 +84,7 @@ class Database {
 
     // Getters e Setters para exercises
     public function createExercise($name, $description, $difficulty, $test) {
-        $query = 'INSERT INTO exercises (name, description, difficulty) VALUES (:name, :description, :difficulty)';
+        $query = 'INSERT INTO exercises (name, description, test, difficulty) VALUES (:name, :description, :test, :difficulty)';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
@@ -158,4 +158,5 @@ class Database {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

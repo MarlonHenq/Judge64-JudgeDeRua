@@ -103,6 +103,16 @@
         </div>
     </div>
 
+
+
+    <div class="stripes">
+        <div class="stripe1"></div>
+        <div class="stripe2"></div>
+        <div class="stripe3"></div>
+        <div class="stripe4"></div>
+        <div class="stripe5"></div>
+    </div>
+
     <footer class="bg-dark text-light text-center py-2 border-top border-secondary mt-3">
         &copy; 2024 Judge64 - Se pá alguns direitos reservados.
         | With <3 by <a href="https://marlonhenq.dev">@MarlonHenq</a>

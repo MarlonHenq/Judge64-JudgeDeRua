@@ -16,7 +16,9 @@ if (!$user) {
 //Lógica para usuário administrador
 $admButtom = '';
 if ($user['admin']) {
-    $admButtom = '<a class="nav-link" href="createEx.php" aria-current="page">Criar Exercício</a>';
+    $admButtom = '<li class="nav-item">
+                        <a class="nav-link active" aria-current="page">|</a>
+                    </li> <a class="nav-link" href="createEx.php" aria-current="page">Criar Exercício</a>';
 }
 
 //Lógica para pegar os exercícios
@@ -38,7 +40,10 @@ for ($i = 0; $i < $exercisesCount; $i++) {
                     <div class="card-body">
                         <h5 class="card-title">' . $exercises[$i]['name'] . '</h5>
                         <p class="card-text">' . $exercises[$i]['description'] . '</p>
-                        <a href="exercuse.php?id=' . $exercises[$i]['id'] . '" class="btn">Ver</a>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge">' . $exercises[$i]['id'] . ': ' . $exercises[$i]['difficulty'] . '</span>
+                            <a href="exercise.php?id=' . $exercises[$i]['id'] . '" class="btn">Ver</a>
+                        </div>
                     </div>
                 </div>
             </div>';
@@ -49,7 +54,10 @@ for ($i = 0; $i < $exercisesCount; $i++) {
                     <div class="card-body">
                         <h5 class="card-title">' . $exercises[$i]['name'] . '</h5>
                         <p class="card-text">' . $exercises[$i]['description'] . '</p>
-                        <a href="exercuse.php?id=' . $exercises[$i]['id'] . '" class="btn btn-default">Fazer</a>
+                        <div class="d-flex justify-content-between">
+                            <span class="badge">' . $exercises[$i]['id'] . ': ' . $exercises[$i]['difficulty'] . '</span>
+                            <a href="exercise.php?id=' . $exercises[$i]['id'] . '" class="btn btn-default">Fazer</a>
+                        </div>
                     </div>
                 </div>
             </div>';
