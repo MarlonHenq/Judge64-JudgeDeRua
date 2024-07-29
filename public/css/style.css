@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans+Mono:wght@100..900&family=Press+Start+2P&display=swap');
 body {
     font-family: 'Press Start 2P', cursive;
     color: #ffffff;
@@ -122,26 +123,57 @@ footer {
     width: 100%;
 }
 
+/* .textarea {
+    background-color: #ffffff;
+    /* color: #000000; */
+    /* border: 2px solid #8DE88E; 
+    border-radius: 0;
+    /* box-shadow: inset 0 0 3px #8DE88E; 
+    border-right: 10px solid #8DE88E;
+    border-bottom: 10px solid #4AA64B;
+
+    font-family: "Fira Code", monospace;
+    font-size: 22px;
+    font-weight: bold;
+} */
 
 .stripes {
     display: flex;
     width: 100%;
     height: 30px;
-
     position: fixed;
     left: 0;
-    bottom: 40px;
+    bottom: 40px; /* Distância do fundo da página */
     width: 100%;
     color: white;
     text-align: center;
     padding: 10px 0;
-  }
+    background: black; /* Adicione uma cor de fundo se necessário */
+    z-index: 1000; /* Ajuste o valor conforme necessário */
+}
+
+/* Estilo para o footer inferior */
+.stripes2 {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0px; /* Distância do fundo da página */
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 0px 0;
+    background: black; /* Adicione uma cor de fundo se necessário */
+    z-index: 1000; /* Ajuste o valor conforme necessário */
+}
+
   .stripe1 {
     background-color: #f20029; /* Azul */
     flex: 1;
   }
   .stripe2 {
-    background-color: #fd7801; /* Laranja */
+    background-color: #fd7801; /* Laranja - */
     flex: 1;
   }
   .stripe3 {
@@ -149,10 +181,10 @@ footer {
     flex: 1;
   }
   .stripe4 {
-    background-color: #48cc31; /* Amarelo */
+    background-color: #48cc31; /* Amarelo - */
     flex: 1;
   }
   .stripe5 {
-    background-color: #14a3fd; /* Vermelho */
+    background-color: #14a3fd; /* Vermelho - */
     flex: 1;
   }

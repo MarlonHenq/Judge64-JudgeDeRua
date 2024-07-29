@@ -32,6 +32,9 @@
         />
 
         <link rel="stylesheet" href="../css/style.css" />
+
+        <link rel="stylesheet" href="../css/highlight.css" />
+
     </head>
 
     <body>
@@ -64,7 +67,40 @@
     <div class="container">
         <br>
 
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title"><?= $exercise['name'] ?></h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><?= $exercise['description'] ?></p>
+                <br>
+                <form action="submit.php" method="post">
+                    <input type="hidden" name="id" value="<?= $exercise['id'] ?>">
+                    <div class="mb-3">
+                        <label for="code" class="form-label">Código:</label>
+                        <div class="highlight-container">
+                            <pre class="highlight"></pre>
+                            <textarea class="form-control textarea" id="code" name="code" rows="40"></textarea>
+                        </div>
+                    </div>
+                    <!-- justify end -->
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+            </div>
+
     </div>
+
+    <br>
+    <br>
+
+    <footer class="stripes2">
+        <div class="stripe1"></div>
+        <div class="stripe2"></div>
+        <div class="stripe3"></div>
+        <div class="stripe4"></div>
+        <div class="stripe5"></div>
+    </footer>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -77,5 +113,9 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <script src="../js/tabFunc.js"></script>
+        <script src="../js/highlight.js"></script>
+
     </body>
 </html>
