@@ -93,6 +93,7 @@
             var loader = document.getElementById('loader');
             var result = document.getElementById('result');
             var testbenchId = <?= json_encode($exercise['id']) ?>; // ID do testbench
+            var userId = <?= json_encode($userId) ?>; // ID do usuário
 
             //Open .env and read URL
             var url = 'https://judge.marlonhenq.dev';
@@ -100,7 +101,7 @@
             loader.style.display = 'block'; // Mostra o loader
             result.innerHTML = ''; // Limpa o resultado anterior
 
-            fetch(url + '/submitAPI.php?testbench_id=' + testbenchId, {
+            fetch(url + '/submitAPI.php?testbench_id=' + testbenchId + '&user_id=' + userId, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'

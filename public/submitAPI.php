@@ -1,4 +1,7 @@
 <?php
+require_once '../app/dbconnection.php';
+$db = new Database();
+$conn = $db->connect();
 // Configuração
 $icarusVerilogPath = 'iverilog';
 $iverilogOptions = '-o ';
@@ -7,6 +10,9 @@ $testbenchDir = __DIR__ . '/test/';
 // Recebe o código Verilog via POST e o ID do testbench via GET
 $verilogCode = $_POST['code'];
 $testbenchId = $_GET['testbench_id'];
+$userId = $_GET['user_id'];
+
+$result = 0;
 
 
 if (empty($verilogCode) || empty($testbenchId)) {
@@ -61,6 +67,7 @@ if ($returnVar === 0) {
 
     if ($runReturnVar === 0) {
         echo json_encode(['status' => 'success', 'message' => 'Teste bem-sucedido.']);
+        $result = 1;
     } else {
         echo json_encode(['status' => 'failure', 'message' => 'Teste falhou.']);
     }
@@ -92,3 +99,12 @@ function deleteDirectory($dir) {
 }
 
 deleteDirectory($executionDir);
+
+//Aqui colocar a atualização no banco do usuário
+
+$exercise = $db->getUserExercise($userId, $testbenchId);
+if ($exercise) {
+    $db->updateUserExercise($userId, $testbenchId, $result, date('Y-m-d H:i:s'), $verilogCode);
+} else {
+    $db->createUserExercise($userId, $testbenchId, $result, date('Y-m-d H:i:s'), $verilogCode);
+}
