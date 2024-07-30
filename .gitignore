@@ -1,1 +1,5 @@
 .env
+public/test/*
+!public/test
+public/tmp/*
+!puclic/tmp
