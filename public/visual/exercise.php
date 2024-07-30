@@ -93,7 +93,7 @@
             var loader = document.getElementById('loader');
             var result = document.getElementById('result');
             var testbenchId = <?= json_encode($exercise['id']) ?>; // ID do testbench
-            var userId = <?= json_encode($userId) ?>; // ID do usuário
+            var userId = <?= json_encode($user['id']) ?>; // ID do usuário
 
             //Open .env and read URL
             var url = 'https://judge.marlonhenq.dev';

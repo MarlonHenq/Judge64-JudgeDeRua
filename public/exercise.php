@@ -30,6 +30,8 @@ if ($user['admin']) {
                     </li> <a class="nav-link" href="createEx.php?id=' . $_GET['id'] . '" aria-current="page">Editar</a>';
 }
 
+$userID = $user['id'];
+
 $UserExercie = $db->getUserExercise($user['id'], $_GET['id']);
 
 $code = '';
