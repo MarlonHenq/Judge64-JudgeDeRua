@@ -39,13 +39,13 @@ for ($i = 0; $i < $exercisesCount; $i++) {
                 <div class="card card-success">
                     <div class="card-body">
                         <h5 class="card-title">' . $exercises[$i]['name'] . '</h5>
-                        <p class="card-text">' . $exercises[$i]['description'] . '</p>
                         <div class="d-flex justify-content-between">
                             <span class="badge">' . $exercises[$i]['id'] . ': ' . $exercises[$i]['difficulty'] . '</span>
                             <a href="exercise.php?id=' . $exercises[$i]['id'] . '" class="btn">Ver</a>
                         </div>
                     </div>
                 </div>
+                <br>
             </div>';
     }
     else {
@@ -53,23 +53,28 @@ for ($i = 0; $i < $exercisesCount; $i++) {
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">' . $exercises[$i]['name'] . '</h5>
-                        <p class="card-text">' . $exercises[$i]['description'] . '</p>
                         <div class="d-flex justify-content-between">
                             <span class="badge">' . $exercises[$i]['id'] . ': ' . $exercises[$i]['difficulty'] . '</span>
                             <a href="exercise.php?id=' . $exercises[$i]['id'] . '" class="btn btn-default">Fazer</a>
                         </div>
                     </div>
                 </div>
+                <br>
             </div>';
     }
         
-    if ($i % 3 == 0) {
+    if ($i+1 % 3 == 0) {
         $content .= '</div>';
         if ($i+1 != $exercisesCount) {
             $content .= '<div class="row">';
         }
     }
 }
+
+if ($exercisesCount % 3 != 0) {
+    $content .= '</div>';
+}
+
 
 //Exercícios feitos pelo usuário
 $userCompletedExercises = $db->getUserCompletedExercises($user['id']);

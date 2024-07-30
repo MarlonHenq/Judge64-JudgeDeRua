@@ -96,6 +96,17 @@ class Database {
         return false;
     }
 
+    public function updateExercise ($id, $name, $description, $difficulty, $test) {
+        $query = 'UPDATE exercises SET name = :name, description = :description, test = :test, difficulty = :difficulty WHERE id = :id';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':test', $test);
+        $stmt->bindParam(':difficulty', $difficulty);
+        return $stmt->execute();
+    }
+
     public function getExercises() {
         $query = 'SELECT * FROM exercises';
         $stmt = $this->conn->prepare($query);

@@ -58,22 +58,22 @@
     </nav>
 
     <div class="container">
-        <form action="createEx.php" method="post">
+        <form action="createEx.php?id=<?= $id ?>" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" value="<?= $name ?>">
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descrição</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
+                <textarea class="form-control" id="description" name="description"><?= $des ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="test" class="form-label">Tests</label>
-                <textarea class="form-control" id="test" name="test"></textarea>
+                <textarea class="form-control" id="test" name="test"><?= $tests ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="difficulty" class="form-label">Dificuldade</label>
-                <select class="form-select" id="difficulty" name="difficulty">
+                <select class="form-select" id="difficulty" name="difficulty" value="<?= $diff ?>">
                     <option value="1">Fácil</option>
                     <option value="2">Médio</option>
                     <option value="3">Difícil</option>
