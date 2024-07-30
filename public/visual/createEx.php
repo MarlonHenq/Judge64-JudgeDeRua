@@ -65,11 +65,15 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descrição</label>
-                <textarea class="form-control" id="description" name="description"><?= $des ?></textarea>
+                <textarea class="form-control" id="description" name="description" rows="20"><?= $des ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="test" class="form-label">Tests</label>
-                <textarea class="form-control" id="test" name="test"><?= $tests ?></textarea>
+                <textarea class="form-control" id="test" name="test" rows="20"><?= $tests ?></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="code" class="form-label">Code</label>
+                <textarea class="form-control" id="code" name="code" rows="20"><?= $code ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="difficulty" class="form-label">Dificuldade</label>

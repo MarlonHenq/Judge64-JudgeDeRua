@@ -20,6 +20,7 @@ $name = '';
 $des = '';
 $tests = '';
 $diff = '';
+$code = '';
 
 if ($_GET['id'] > 0){
     $torf = true;
@@ -37,14 +38,16 @@ if ($torf) {
     $des = $exercise['description'];
     $tests = $exercise['test'];
     $diff = $exercise['difficulty'];
+    $code = $exercise['code'];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = $_POST['name'];
         $description = $_POST['description'];
         $test = $_POST['test'];
         $difficulty = $_POST['difficulty'];
+        $code = $_POST['code'];
 
-        $db->updateExercise($_GET['id'], $name, $description, $difficulty, $test);
+        $db->updateExercise($_GET['id'], $name, $description, $difficulty, $test, $code);
 
         //Criar o arquivo do testbench com o id do exercício dado pelo banco
         $testbenchFile = $testbenchDir . $_GET['id'] . '.v';
@@ -64,16 +67,15 @@ else{
 
     $id = '';
 
-    echo "To aqui";
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = $_POST['name'];
         $description = $_POST['description'];
         $test = $_POST['test'];
         $difficulty = $_POST['difficulty'];
+        $code = $_POST['code'];
 
 
-        $db->createExercise($name, $description, $difficulty, $test);
+        $db->createExercise($name, $description, $difficulty, $test, $code);
 
         //Criar o arquivo do testbench com o id do exercício dado pelo banco
         $testbenchFile = $testbenchDir . $db->getLastId() . '.v';

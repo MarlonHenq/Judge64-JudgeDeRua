@@ -66,12 +66,18 @@ if ($returnVar === 0) {
     exec($runCommand, $runOutput, $runReturnVar);
 
     if ($runReturnVar === 0) {
-        echo json_encode(['status' => 'success', 'message' => 'Teste bem-sucedido.']);
-        $result = 1;
-    } else {
-        echo json_encode(['status' => 'failure', 'message' => 'Teste falhou.']);
+        // for ($i = 0; $i < count($runOutput); $i++) {
+        //     error_log($i . $runOutput[$i]);
+        // }
+        if ($runOutput[0] == 'erro') {
+            echo json_encode(['status' => 'failure', 'message' => 'Teste falhou.']);
+        } else {
+            echo json_encode(['status' => 'success', 'message' => 'Teste bem-sucedido.']);
+            $result = 1;
+        }
     }
-} else {
+}
+else {
     echo json_encode(['status' => 'error', 'message' => 'Erro na compilação.']);
 }
 

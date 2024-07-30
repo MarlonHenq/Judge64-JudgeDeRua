@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $db->createUser($username, $nickname, $password, $token);
         setcookie('auth_token', $token, time() + (86400 * 30), "/"); // Expira em 30 dias
+        echo '<script>alert("Usuário cadastrado com sucesso!");</script>';
         header('Location: dashboard.php');
         exit;
     }

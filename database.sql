@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS exercises (
     name VARCHAR(100) NOT NULL,
     description TEXT,
     test TEXT,
+    code TEXT,
     users_completed TEXT,
     difficulty ENUM('Easy', 'Medium', 'Hard') NOT NULL,
     available BOOLEAN DEFAULT TRUE,

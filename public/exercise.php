@@ -37,6 +37,8 @@ $UserExercie = $db->getUserExercise($user['id'], $_GET['id']);
 $code = '';
 if ($UserExercie) {
     $code = $UserExercie['user_solution'];
+}else{
+    $code = $exercise['code'];
 }
 
 require_once 'visual/exercise.php';

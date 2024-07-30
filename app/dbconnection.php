@@ -83,12 +83,13 @@ class Database {
     }
 
     // Getters e Setters para exercises
-    public function createExercise($name, $description, $difficulty, $test) {
-        $query = 'INSERT INTO exercises (name, description, test, difficulty) VALUES (:name, :description, :test, :difficulty)';
+    public function createExercise($name, $description, $difficulty, $test, $code) {
+        $query = 'INSERT INTO exercises (name, description, test, code,  difficulty) VALUES (:name, :description, :test, :code, :difficulty)';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':test', $test);
+        $stmt->bindParam(':code', $code);
         $stmt->bindParam(':difficulty', $difficulty);
         if ($stmt->execute()) {
             return $this->conn->lastInsertId();
@@ -96,13 +97,14 @@ class Database {
         return false;
     }
 
-    public function updateExercise ($id, $name, $description, $difficulty, $test) {
-        $query = 'UPDATE exercises SET name = :name, description = :description, test = :test, difficulty = :difficulty WHERE id = :id';
+    public function updateExercise ($id, $name, $description, $difficulty, $test, $code) {
+        $query = 'UPDATE exercises SET name = :name, description = :description, test = :test, code = :code, difficulty = :difficulty WHERE id = :id';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':test', $test);
+        $stmt->bindParam(':code', $code);
         $stmt->bindParam(':difficulty', $difficulty);
         return $stmt->execute();
     }
