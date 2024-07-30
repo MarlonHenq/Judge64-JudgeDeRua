@@ -95,18 +95,7 @@
             var testbenchId = <?= json_encode($exercise['id']) ?>; // ID do testbench
 
             //Open .env and read URL
-            var url = '';
-            fetch('../.env')
-            .then(response => response.text())
-            .then(data => {
-                var lines = data.split('\n');
-                for (var i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith('URL=')) {
-                        url = lines[i].substring(4);
-                        break;
-                    }
-                }
-            });
+            var url = 'https://judge.marlonhenq.dev';
 
             loader.style.display = 'block'; // Mostra o loader
             result.innerHTML = ''; // Limpa o resultado anterior
