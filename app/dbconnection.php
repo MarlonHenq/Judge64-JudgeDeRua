@@ -119,6 +119,10 @@ class Database {
         return $stmt->execute();
     }
 
+    public function getLastId() {
+        return $this->conn->lastInsertId();
+    }
+
     // Getters e Setters para user_exercises
     public function createUserExercise($user_id, $exercise_id, $completed, $completion_date, $user_solution) {
         $query = 'INSERT INTO user_exercises (user_id, exercise_id, completed, completion_date, user_solution) VALUES (:user_id, :exercise_id, :completed, :completion_date, :user_solution)';

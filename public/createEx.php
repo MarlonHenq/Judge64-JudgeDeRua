@@ -1,4 +1,6 @@
 <?php
+$testbenchDir = '/usr/local/testbenches/';
+
 ob_start();
 
 require_once '../app/dbconnection.php';
@@ -19,9 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $test = $_POST['test'];
     $difficulty = $_POST['difficulty'];
 
-    //Criar arquivo aqui
 
     $db->createExercise($name, $description, $difficulty, $test);
+
+    //Criar o arquivo do testbench com o id do exercício dado pelo banco
+    $testbenchFile = $testbenchDir . $db->getLastId() . '.v';
+    file_put_contents($testbenchFile, $test);
+
     echo '<div class="alert alert-success" role="alert">Exercício criado com sucesso!</div>';
     header('Location: dashboard.php');
     exit;

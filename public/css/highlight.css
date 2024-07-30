@@ -10,6 +10,9 @@
     padding: 10px;
     white-space: pre;
     overflow: auto;
+
+    border-right: 10px solid #8DE88E;
+    border-bottom: 10px solid #4AA64B;
 }
 .highlight {
     position: absolute;

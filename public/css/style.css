@@ -188,3 +188,33 @@ footer {
     background-color: #14a3fd; /* Vermelho - */
     flex: 1;
   }
+
+.alert-warning {
+    background-color: #f2f540;
+    color: black;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border-right: 10px solid #9ea00b;
+    border-bottom: 10px solid #9ea00b;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border-right: 10px solid #125b14;
+    border-bottom: 10px solid #125b14;
+}
+
+.alert-danger {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border-right: 10px solid #950d03;
+    border-bottom: 10px solid #950d03;
+}

@@ -32,5 +32,9 @@ if ($user['admin']) {
 
 $UserExercie = $db->getUserExercise($user['id'], $_GET['id']);
 
+$code = '';
+if ($UserExercie) {
+    $code = $UserExercie['user_solution'];
+}
 
 require_once 'visual/exercise.php';
