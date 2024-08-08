@@ -131,7 +131,7 @@
         });
     </script>
 
-    <!-- <script src="../js/copiaNaoComedia.js"></script> -->
+    <script src="../js/copiaNaoComedia.js"></script>
     
 </div>
 </body>
