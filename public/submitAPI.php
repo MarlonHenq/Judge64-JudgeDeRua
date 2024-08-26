@@ -106,7 +106,7 @@ function deleteDirectory($dir) {
 
 deleteDirectory($executionDir);
 
-//Aqui colocar a atualização no banco do usuário
+//Aqui colocar depois a atualização no banco do usuário
 
 $exercise = $db->getUserExercise($userId, $testbenchId);
 if ($exercise) {
