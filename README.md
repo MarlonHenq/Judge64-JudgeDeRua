@@ -4,6 +4,8 @@ O projeto Judge64 (antigo Judge-de-rua) é um sistema de judge (avaliação) de 
 
 Você pode acessar a versão de produção em [judge.MarlonHenq.dev](http://judge.marlonhenq.dev).
 
+![Print do projeto](image.png)
+
 O projeto tem esse antigo nome visto que a plataforma inteira foi desenvolvida com PHP sem frameworks em basicamente duas sprints (em dois dias) para a realização de um pequeno hackaton de hardware após o [Aulão de Verilog](https://www.linkedin.com/feed/update/urn:li:activity:7226317515495206912/) do [Patos - Grupo de OpenSource da UFSCar](https://patos.dev).
 
 ## Como rodar?
