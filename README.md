@@ -45,6 +45,13 @@ Configuração para produção com Apache:
 ```
 PS: Não esqueça de trocar `/path/to/judge64` pelo caminho correto do projeto.
 
+Caso você queira rodar o projeto no caminho padrão do apache (`/var/www/html/`) não se esqueça de mudar o `DocumentRoot` e o `Directory` para `/var/www/html/public`, além de dar os permissões para os diretórios `test` e `tmp`:
+    
+```bash
+chown -R www-data /var/www/html/public/test/
+chown -R www-data /var/www/html/public/tmp/
+``` 
+
 ## Como contribuir?
 
 Você pode contribuir com o projeto de formas menos diretas como:
