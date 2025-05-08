@@ -2,7 +2,7 @@
 
 O projeto Judge64 (antigo Judge-de-rua) é um sistema de judge (avaliação) de desafios de desenvolvimento de hardware em Verilog.
 
-Você pode acessar a versão de produção em [judge.MarlonHenq.dev](http://judge.marlonhenq.dev).
+Este repositório foi descontinuado, contendo os primeiros códigos da plataforma, caso queira acessar a plataforma atual acesse: [judge64.com](http://judge64.com).
 
 ![Print do projeto](image.png)
 
